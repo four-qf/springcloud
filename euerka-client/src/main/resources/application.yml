@@ -1,0 +1,19 @@
+spring:
+  application:
+    name: eureka-client
+app:
+  hostname: localhost
+server:
+  port: 8080
+eureka:
+  client:
+#    registerWithEureka: false
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+  instance:
+    statusPageUrl: https://${app.hostname}:${server.port}/info
+    healthCheckUrl: https://${app.hostname}:${server.port}/health
+    instance_id: ${app.hostname}:${server.port}:w
+
+#server:
+#  port: 8080
