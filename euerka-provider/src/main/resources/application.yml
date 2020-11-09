@@ -1,12 +1,13 @@
 spring:
   application:
-    name: eureka-client
+    name: eureka-provider
 app:
   hostname: localhost
 server:
-  port: 8080
+  port: 8082
 eureka:
   client:
+#    registerWithEureka: false
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
   instance:
@@ -14,6 +15,3 @@ eureka:
     healthCheckUrl: https://${app.hostname}:${server.port}/health
     instance_id: ${app.hostname}:${server.port}:${spring.application.name}
 
-security:
-  basic:
-    enabled: true

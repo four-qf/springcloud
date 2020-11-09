@@ -19,6 +19,9 @@
         <module>cloud-gateway</module>
         <module>euerka-server</module>
         <module>euerka-client</module>
+        <module>euerka-provider</module>
+        <module>euerka-provider2</module>
+        <module>euerka-feign</module>
     </modules>
 
     <properties>
