@@ -1,6 +1,10 @@
 spring:
   application:
     name: eureka-provider
+  redis:
+    cluster:
+      nodes: 47.115.3.241:6388, 47.115.3.241:6384, 47.115.3.241:6383, 47.115.3.241:6385, 47.115.3.241:6384,47.115.3.241:6382,81.71.31.103:6382,47.115.3.241:6389
+
 app:
   hostname: localhost
 server:
@@ -14,4 +18,5 @@ eureka:
     statusPageUrl: https://${app.hostname}:${server.port}/info
     healthCheckUrl: https://${app.hostname}:${server.port}/health
     instance_id: ${app.hostname}:${server.port}:${spring.application.name}
+
 
