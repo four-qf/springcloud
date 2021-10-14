@@ -1,0 +1,14 @@
+server:
+  port: 8761
+#eureka:
+#  client:
+#    tls:
+#      enabled: true
+eureka:
+  client:
+    registerWithEureka: false
+    fetchRegistry: false
+  server:
+    waitTimeInMsWhenSyncEmpty: 100
+  instance:
+    hostname: localhost
