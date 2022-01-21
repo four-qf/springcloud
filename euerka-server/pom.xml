@@ -24,20 +24,5 @@
 <!--        </dependency>-->
     </dependencies>
 
-    <build>
-    </build>
-    <profiles>
-        <profile>
-            <id>dev</id>
-        </profile>
-
-        <profile>
-            <id>test</id>
-        </profile>
-
-        <profile>
-            <id>prod</id>
-        </profile>
-    </profiles>
 
 </project>
