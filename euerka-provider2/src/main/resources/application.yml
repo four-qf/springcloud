@@ -1,6 +1,17 @@
 spring:
   application:
     name: eureka-provider
+  kafka:
+    bootstrap-servers: www.qxlearn.work:9092
+    producer:
+      acks: -1
+      retries: 3
+    consumer:
+#      enable-auto-commit: false
+      auto-offset-reset: latest
+    listener:
+      concurrency: 2
+      ack-mode: batch
 app:
   hostname: localhost
 server:
@@ -8,7 +19,6 @@ server:
 eureka:
   client:
 #    registerWithEureka: false
-    serviceUrl:
       defaultZone: http://localhost:8761/eureka/
   instance:
     statusPageUrl: https://${app.hostname}:${server.port}/info
